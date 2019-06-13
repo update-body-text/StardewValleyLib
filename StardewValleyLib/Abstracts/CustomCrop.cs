@@ -84,7 +84,7 @@ namespace StardewValleyLib.Abstracts
         {
             get; set;
         }
-        public float ExtraChance
+        public double ExtraChance
         {
             get { return extraChance; }
             set
@@ -117,7 +117,7 @@ namespace StardewValleyLib.Abstracts
         private int CropPrice;
         private int AmountOfGrowthCycles;
         private int MinAmountOfCropsOnHarvest;
-        private float extraChance;
+        private double extraChance;
         private int SeedPrice;
 
         public CustomCrop()
