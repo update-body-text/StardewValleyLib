@@ -126,7 +126,21 @@ namespace StardewValleyLib.Abstracts
              int MinHarvest, int MaxHarvest, int FarmSkillExp, double ExtraChance, int SeedPurchasePrice, Texture2D Texture)
             : base()
         {
-
+            this.Name = Name;
+            this.Price = Price;
+            this.SeedName = SeedName;
+            this.Type = Type;
+            this.GrowthSeason = GrowthSeason;
+            this.Phases = Phases;
+            this.RegrowthPhase = RegrowthPhases;
+            this.CanHarvestWithScythe = CanHarvestWithScythe;
+            this.IsTrellisCrop = IsTrellisCrop;
+            this.MinHarvest = MinHarvest;
+            this.MaxHarvest = MaxHarvest;
+            this.FarmSkillExp = FarmSkillExp;
+            this.ExtraChance = ExtraChance;
+            this.SeedPurchasePrice = SeedPurchasePrice;
+            this.Texture = Texture;
         }
 
         public enum CropType
