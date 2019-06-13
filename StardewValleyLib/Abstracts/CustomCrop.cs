@@ -7,11 +7,11 @@ namespace StardewValleyLib.Abstracts
 
     public class CustomCrop : Crop
     {
-        private String Name 
+        public String Name 
         {
             get; set;
         }
-        private int Price
+        public int Price
         {
             get { return CropPrice; }
             set
@@ -23,19 +23,19 @@ namespace StardewValleyLib.Abstracts
                 CropPrice = value;
             }
         }
-        private String SeedName
+        public String SeedName
         {
             get; set;
         }
-        private CropType Type
+        public CropType Type
         {
             get; set;
         }
-        private Season GrowthSeason
+        public Season GrowthSeason
         {
             get; set;
         }
-        private int Phases
+        public int Phases
         {
             get { return AmountOfGrowthCycles; }
             set
@@ -47,23 +47,23 @@ namespace StardewValleyLib.Abstracts
 
             }
         }
-        private int RegrowthPhase
+        public int RegrowthPhase
         {
             get; set;
         }
-        private bool CanHarvestWithScythe
+        public bool CanHarvestWithScythe
         {
             get; set;
         }
-        private bool IsTrellisCrop
+        public bool IsTrellisCrop
         {
             get; set;
         }
-        private int Bonus
+        public int Bonus
         {
             get; set;
         }
-        private int MinHarvest
+        public int MinHarvest
         {
             get { return MinAmountOfCropsOnHarvest; }
             set
@@ -76,15 +76,15 @@ namespace StardewValleyLib.Abstracts
 
             }
         }
-        private int MaxHarvest
+        public int MaxHarvest
         {
             get; set;
         }
-        private int FarmSkillExp
+        public int FarmSkillExp
         {
             get; set;
         }
-        private float ExtraChance
+        public float ExtraChance
         {
             get { return extraChance; }
             set
@@ -96,7 +96,7 @@ namespace StardewValleyLib.Abstracts
                 extraChance = value;
             }
         }
-        private int SeedPurchasePrice
+        public int SeedPurchasePrice
         {
             get { return SeedPrice; }
             set
@@ -109,7 +109,7 @@ namespace StardewValleyLib.Abstracts
             }
 
         }
-        private Texture2D Texture
+        public Texture2D Texture
         {
             get; set;
         }
