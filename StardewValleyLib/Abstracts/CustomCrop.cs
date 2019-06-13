@@ -121,9 +121,12 @@ namespace StardewValleyLib.Abstracts
         private double extraChance;
         private int SeedPrice;
 
-        public CustomCrop(string, int, string, CropType, Season, int, int, bool, bool, int, int, int, double, int, Texture2D)
+        public CustomCrop(string Name, int Price, string SeedName, CropType Type,
+             Season GrowthSeason, int Phases, int RegrowthPhases, bool CanHarvestWithScythe, bool IsTrellisCrop,
+             int MinHarvest, int MaxHarvest, int FarmSkillExp, double ExtraChance, int SeedPurchasePrice, Texture2D Texture)
+            : base()
         {
-            
+
         }
 
         public enum CropType
