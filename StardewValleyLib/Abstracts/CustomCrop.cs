@@ -13,14 +13,14 @@ namespace StardewValleyLib.Abstracts
         }
         private int Price
         {
-            get { return Price; }
+            get { return CropPrice; }
             set
             {
                 if (value < 0)
                 {
                     throw new ArgumentOutOfRangeException( $"{nameof(value)} cannot be negative.");
                 }
-                Price = value;
+                CropPrice = value;
             }
         }
         private String SeedName
@@ -37,13 +37,13 @@ namespace StardewValleyLib.Abstracts
         }
         private int Phases
         {
-            get { return Price; }
+            get { return AmountOfGrowthCycles; }
             set
             {
                 if (value < 1) {
                     throw new ArgumentOutOfRangeException($"{nameof(value)} must be above 0.");
                 }
-                Phases = value;
+                AmountOfGrowthCycles = value;
 
             }
         }
@@ -65,14 +65,14 @@ namespace StardewValleyLib.Abstracts
         }
         private int MinHarvest
         {
-            get { return minHarvest; }
+            get { return MinAmountOfCropsOnHarvest; }
             set
             {
                 if (value < 1)
                 {
                     throw new ArgumentOutOfRangeException($"{nameof(value)} must be above 0.");
                 }
-                Phases = value;
+                MinAmountOfCropsOnHarvest = value;
 
             }
         }
@@ -84,28 +84,28 @@ namespace StardewValleyLib.Abstracts
         {
             get; set;
         }
-        private int ExtraChance
+        private float ExtraChance
         {
-            get { return ExtraChance; }
+            get { return extraChance; }
             set
             {
-                if (value != 0 || value != 1)
+                if (value < 0 || value > 1)
                 {
-                    throw new ArgumentOutOfRangeException($"{nameof(value)} must be 0 or 1.");
+                    throw new ArgumentOutOfRangeException($"{nameof(value)} must be between 0 or 1 inclusive.");
                 }
-                ExtraChance = value;
+                extraChance = value;
             }
         }
         private int SeedPurchasePrice
         {
-            get { return SeedPurchasePrice; }
+            get { return SeedPrice; }
             set
             {
                 if (value < 0)
                 {
                     throw new ArgumentOutOfRangeException($"{nameof(value)} cannot be negative.");
                 }
-                SeedPurchasePrice = value;
+                SeedPrice = value;
             }
 
         }
@@ -113,6 +113,12 @@ namespace StardewValleyLib.Abstracts
         {
             get; set;
         }
+
+        private int CropPrice;
+        private int AmountOfGrowthCycles;
+        private int MinAmountOfCropsOnHarvest;
+        private float extraChance;
+        private int SeedPrice;
 
         public CustomCrop()
         {
