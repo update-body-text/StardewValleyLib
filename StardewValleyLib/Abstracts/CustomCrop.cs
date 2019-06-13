@@ -120,7 +120,7 @@ namespace StardewValleyLib.Abstracts
         private double extraChance;
         private int SeedPrice;
 
-        public CustomCrop()
+        public CustomCrop(string, int, string, CropType, Season, int, int, bool, bool, int, int, int, double, int, Texture2D) : base()
         {
             
         }
