@@ -1,26 +1,118 @@
 ﻿using System;
 using StardewValley;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace StardewValleyLib.Abstracts
 {
 
     public class CustomCrop : Crop
     {
-        private readonly String name;
-        private readonly int price;
-        private readonly String seedName;
-        private readonly CropType cropType;
-        private readonly Season season;
-        private readonly int phases;
-        private readonly int regrowthPhase;
-        private readonly bool canHarvestWithScythe;
-        private readonly bool isTrellisCrop;
-        private readonly int bonus;
-        private readonly int minHarvest;
-        private readonly int maxHarvest;
-        private readonly int farmSkillExp;
-        private readonly int extraChance;
-        private readonly int seedPurchasePrice;
+        private String Name 
+        {
+            get; set;
+        }
+        private int Price
+        {
+            get { return Price; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException( $"{nameof(value)} cannot be negative.");
+                }
+                Price = value;
+            }
+        }
+        private String SeedName
+        {
+            get; set;
+        }
+        private CropType Type
+        {
+            get; set;
+        }
+        private Season GrowthSeason
+        {
+            get; set;
+        }
+        private int Phases
+        {
+            get { return Price; }
+            set
+            {
+                if (value < 1) {
+                    throw new ArgumentOutOfRangeException($"{nameof(value)} must be above 0.");
+                }
+                Phases = value;
+
+            }
+        }
+        private int RegrowthPhase
+        {
+            get; set;
+        }
+        private bool CanHarvestWithScythe
+        {
+            get; set;
+        }
+        private bool IsTrellisCrop
+        {
+            get; set;
+        }
+        private int Bonus
+        {
+            get; set;
+        }
+        private int MinHarvest
+        {
+            get { return minHarvest; }
+            set
+            {
+                if (value < 1)
+                {
+                    throw new ArgumentOutOfRangeException($"{nameof(value)} must be above 0.");
+                }
+                Phases = value;
+
+            }
+        }
+        private int MaxHarvest
+        {
+            get; set;
+        }
+        private int FarmSkillExp
+        {
+            get; set;
+        }
+        private int ExtraChance
+        {
+            get { return ExtraChance; }
+            set
+            {
+                if (value != 0 || value != 1)
+                {
+                    throw new ArgumentOutOfRangeException($"{nameof(value)} must be 0 or 1.");
+                }
+                ExtraChance = value;
+            }
+        }
+        private int SeedPurchasePrice
+        {
+            get { return SeedPurchasePrice; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException($"{nameof(value)} cannot be negative.");
+                }
+                SeedPurchasePrice = value;
+            }
+
+        }
+        private Texture2D Texture
+        {
+            get; set;
+        }
 
         public CustomCrop()
         {
