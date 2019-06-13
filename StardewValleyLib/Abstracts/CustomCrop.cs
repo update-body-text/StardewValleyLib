@@ -122,6 +122,7 @@ namespace StardewValleyLib.Abstracts
 
         public CustomCrop()
         {
+            
         }
 
         public enum CropType
