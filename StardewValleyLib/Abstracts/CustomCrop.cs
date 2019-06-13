@@ -1,5 +1,6 @@
 ﻿using System;
 using StardewValley;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace StardewValleyLib.Abstracts
@@ -120,7 +121,7 @@ namespace StardewValleyLib.Abstracts
         private double extraChance;
         private int SeedPrice;
 
-        public CustomCrop(string, int, string, CropType, Season, int, int, bool, bool, int, int, int, double, int, Texture2D) : base()
+        public CustomCrop(string, int, string, CropType, Season, int, int, bool, bool, int, int, int, double, int, Texture2D)
         {
             
         }
