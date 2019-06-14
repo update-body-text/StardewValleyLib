@@ -26,7 +26,10 @@ namespace StardewValleyLib
                 ? tile
                 : Game1.player.GetGrabTile();
             this.Monitor.Log(tile.ToString());
-            Game1.getLocationFromName("Farm").dropObject(new TestItem(), tile, Game1.viewport, true, (Farmer)null);
+            if (e.Button == SButton.B)
+            {
+                Game1.player.addItemByMenuIfNecessary(new TestItem());
+            }
         }
  
     }
