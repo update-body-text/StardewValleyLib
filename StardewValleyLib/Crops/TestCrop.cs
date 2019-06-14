@@ -12,7 +12,7 @@ namespace StardewValleyLib.Crops
         private const string SEED_NAME = "Test Flower Seeds";
         private const CropType TYPE = CropType.FLOWER;
         private const Season GROWTH_SEASON = Season.SPRING;
-        private const int PHASES = 2;
+        private const int PHASES = 5;
         private const int REGROWTH_PHASES = 2;
         private const bool CAN_HARVEST_WITH_SCYTHE = true;
         private const bool IS_TRELLIS_CROP = true;

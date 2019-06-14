@@ -38,6 +38,7 @@
     <Compile Include="Abstracts\CustomCrop.cs" />
     <Compile Include="Crops\TestCrop.cs" />
     <Compile Include="Abstracts\CustomItem.cs" />
+    <Compile Include="Items\TestItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -46,6 +47,7 @@
   <ItemGroup>
     <Folder Include="Abstracts\" />
     <Folder Include="Crops\" />
+    <Folder Include="Items\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Pathoschild.Stardew.ModBuildConfig.2.2.0\build\Pathoschild.Stardew.ModBuildConfig.targets" Condition="Exists('..\packages\Pathoschild.Stardew.ModBuildConfig.2.2.0\build\Pathoschild.Stardew.ModBuildConfig.targets')" />
