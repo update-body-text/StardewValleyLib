@@ -39,6 +39,7 @@
     <Compile Include="Crops\TestCrop.cs" />
     <Compile Include="Abstracts\CustomItem.cs" />
     <Compile Include="Items\TestItem.cs" />
+    <Compile Include="Abstracts\CustomSeed.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

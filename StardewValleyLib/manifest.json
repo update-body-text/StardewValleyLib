@@ -4,7 +4,7 @@
   "Version": "1.0.0",
   "Description": "Get your shit together SDV modding community and don't be lazy.",
   "UniqueID": "UpdateBodyText.SDVLib",
-  "EntryDll": "SDVLib.dll",
+  "EntryDll": "StardewValleyLib.dll",
   "MinimumApiVersion": "2.11.0",
   "UpdateKeys": []
 }
